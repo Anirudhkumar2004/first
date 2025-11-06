@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f3f3f3;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background: #fff;
+      width: 90%;
+      max-width: 650px;
+      margin: 40px auto;
+      padding: 25px 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: left;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      width: 160px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .input-box {
+      position: relative;
+      flex: 1;
+    }
+
+    .input-box i {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+    }
+
+    .input-box input,
+    .input-box select,
+    .input-box textarea {
+      width: 100%;
+      max-width: 90%;
+      padding: 10px 10px 10px 35px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .input-box input:focus,
+    .input-box select:focus,
+    .input-box textarea:focus {
+      border-color: #ff6600;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .radio-group {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .radio-group label {
+      font-weight: normal;
+    }
+
+    button {
+      background-color: #f4a460;
+      border: none;
+      padding: 10px;
+      color: white;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e39555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Request a Quote</h2>
+    <form>
+      <div class="form-group">
+        <label>First Name</label>
+        <div class="input-box">
+          <i class="fa fa-user"></i>
+          <input type="text" placeholder="First Name">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Last Name</label>
+        <div class="input-box">
+          <i class="fa fa-user"></i>
+          <input type="text" placeholder="Last Name">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>E-Mail</label>
+        <div class="input-box">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="E-Mail Address">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Phone #</label>
+        <div class="input-box">
+          <i class="fa fa-phone"></i>
+          <input type="text" placeholder="(845)555-1212">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Address</label>
+        <div class="input-box">
+          <i class="fa fa-home"></i>
+          <input type="text" placeholder="Address">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>City</label>
+        <div class="input-box">
+          <i class="fa fa-city"></i>
+          <input type="text" placeholder="City">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>State</label>
+        <div class="input-box">
+          <i class="fa fa-list"></i>
+          <select>
+            <option>Please select your state</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Kolkata</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Zip Code</label>
+        <div class="input-box">
+          <i class="fa fa-map-pin"></i>
+          <input type="num" placeholder="Zip Code">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Website or domain name</label>
+        <div class="input-box">
+          <i class="fa fa-globe"></i>
+          <input type="text" placeholder="Website or domain name">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Do you have hosting?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="hosting"> Yes</label>
+          <label><input type="radio" name="hosting"> No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Project Description</label>
+        <div class="input-box">
+          <i class="fa fa-pencil-alt"></i>
+          <textarea rows="3" placeholder="Project Description"></textarea>
+        </div>
+      </div>
+
+      <button type="submit"><i class="fa fa-paper-plane"></i> Send</button>
+    </form>
+  </div>
+</body>
+</html>
