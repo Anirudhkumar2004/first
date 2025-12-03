@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Inline Block Navbar with List</title>
+
+<style>
+    body{
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* NAVBAR CONTAINER */
+    nav{
+        background: #333;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    /* REMOVE DEFAULT UL STYLE */
+    nav ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* MAKE LI HORIZONTAL USING INLINE-BLOCK */
+    nav ul li{
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    /* NAV LINKS */
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px 20px;
+        display: inline-block;
+        transition: 0.3s;
+    }
+
+     nav ul li a:hover{
+        background: #555;
+        border-radius: 4px;
+    }
+
+    
+    nav ul li a.active{
+        background: #ff523b;
+        border-radius: 4px;
+    }
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

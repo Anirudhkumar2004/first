@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float Properties Demo</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h2{
+            background: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .box{
+            width: 150px;
+            height: 100px;
+            background: #ff9f43;
+            color: #fff;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        /* Floating Examples */
+        .float-left{
+            float: left;
+            background: #1dd1a1;
+        }
+
+        .float-right{
+            float: right;
+            background: #54a0ff;
+        }
+
+        .float-none{
+            float: none;
+            background: #ff6b6b;
+        }
+
+        /* Clear Examples */
+        .clear-left{
+            clear: left;
+            background: #341f97;
+        }
+
+        .clear-right{
+            clear: right;
+            background: #ee5253;
+        }
+
+        .clear-both{
+            clear: both;
+            background: #222f3e;
+        }
+
+        /* clearfix for parent collapse */
+        .parent{
+            border: 2px solid #aaa;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .text-block{
+            margin: 20px 0;
+            background: #f1f2f6;
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Float Properties Demonstration</h1>
+
+    <h2>1. float: left</h2>
+    <div class="box float-left">Float Left</div>
+    <p class="text-block">
+        This paragraph demonstrates how text flows around an element that is floated to the left.
+        The floated box allows the text to wrap around its right side. Float is useful for aligning
+        images beside content.
+    </p>
+
+    <h2>2. float: right</h2>
+    <div class="box float-right">Float Right</div>
+    <p class="text-block">
+        This paragraph shows floating to the right. Text wraps around the left side. Floats were commonly
+        used in older website layouts before flexbox and grid.
+    </p>
+
+    <h2>3. float: none</h2>
+    <div class="box float-none">Float None</div>
+    <p class="text-block">This box does not float and stays in normal document flow.</p>
+
+    <h2>4. Using Clear</h2>
+
+    <div class="box float-left">Left Float</div>
+    <div class="box float-right">Right Float</div>
+
+    <div class="box clear-left">Clear Left</div>
+    <div class="box clear-right">Clear Right</div>
+    <div class="box clear-both">Clear Both</div>
+
+    <h2>5. Parent Collapse Issue + clearfix</h2>
+
+    <p>Without clearfix, the parent container collapses because floated children are taken out of normal flow.</p>
+
+    <div class="parent clearfix">
+        <div class="box float-left">Floating Box</div>
+        <div class="box float-left">Floating Box</div>
+        <p>This parent box uses <strong>clearfix</strong> to stretch around the floated children.</p>
+    </div>
+
+</body>
+</html>
